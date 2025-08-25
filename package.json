@@ -4,10 +4,10 @@
   "description": "Node-RED project for funding history collection",
   "main": "index.js",
   "scripts": {
-    "start": "node-red -u ./data"
-  },
+  "start": "npx node-red -u ./data"
+},
   "dependencies": {
-    "node-red": "^3.1.15"
+    "node-red": "^3.1.0"
   },
   "engines": {
     "node": ">=18.0.0"
