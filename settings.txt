@@ -1,0 +1,26 @@
+/* Minimal Node-RED settings for Render */
+module.exports = {
+  uiHost: "0.0.0.0",
+  uiPort: process.env.PORT || 1880,
+  flowFile: "flows.json",
+
+  // Разрешить require в Function
+  functionExternalModules: true,
+
+  // Что будет доступно через global.get(...)
+  functionGlobalContext: {
+    crypto:   require("crypto"),
+    cryptojs: require("crypto-js"),
+  },
+
+  // ПЕРСИСТЕНТНЫЕ глобалки/контексты на диске
+  contextStorage: {
+    default: {
+      module: "localfilesystem",
+      flushInterval: 15,
+      writeOnShutdown: true,
+    },
+  },
+
+  logging: { console: { level: "info", metrics: false, audit: false } },
+};
