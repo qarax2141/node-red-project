@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/node-red/red.js -u ./data"
-  },
+  "start": "node ./node_modules/node-red/red.js -u /data -s /data/settings.js"
+},
   "dependencies": {
     "node-red": "^3.1.0"
   }
